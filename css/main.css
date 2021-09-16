@@ -89,6 +89,7 @@ textarea {
 
    .content-wrapper{
      width: 90%;
+     margin: 50px 0;
    }
 
  /*--------------------base header-----footer style---------------------------*/
@@ -101,6 +102,10 @@ footer{
   flex-flow: row wrap;
 }
 
+header{
+  padding: 15px 0;
+}
+
 header .content-wrapper{
   display: flex;
   justify-content: center;
@@ -110,14 +115,15 @@ header .content-wrapper{
 }
 
 .header-divider{
-  margin-top: 20px;
+  margin: 10px 0 20px 0;
+  height: 1px;
   width: 100%;
-
+  background: darkgrey;
 }
 
 header nav{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center; 
   flex-flow: row wrap;
   width: 60%;
@@ -126,11 +132,16 @@ header nav{
 header nav ul{
   display: flex;
   justify-content: space-between;
-  align-items: center;
   list-style: none;
   width: 100%;
-  margin: 20px 0;
-  padding: 0;
+}
+
+footer {
+  flex-direction: column;
+}
+
+footer p{
+  margin:0;
 }
 
 footer .content-wrapper{
@@ -139,13 +150,13 @@ footer .content-wrapper{
   text-align: center;
 }
 
-footer .social{
-  padding-top: 45px;
+footer .contact{
+  margin-bottom: 50px;
 }
 
 footer .social-icons{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -155,27 +166,23 @@ footer .social-icons p{
   align-items: center;
 }
 
-footer p{
-  margin:0;
+footer .copyright {
+  margin: 20px 0;
 }
 
-/* Header Style */
+/*=======================================================================================
+              <<Mobile>> Homepage
+=========================================================================================*/
 
-header{
-  padding: 15px 0;
-}
 
-/*------------------<<Mobile>>----- Home Page----------------------------*/
-
-/*Hero area*/
+/*-----------Hero area-------------*/
 .hero-area{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 300px;
 }
 
+/*------- Aside-Form-------------- */
 aside{
   display: flex;
   justify-content: center;
@@ -184,7 +191,7 @@ aside{
   background: green;
 }
 
-.form-description{
+/*.form-description{
   margin-top: 50px;
   margin-bottom: 40px;
 }
@@ -192,11 +199,22 @@ aside{
 .form{
   margin-bottom: 50px;
 }
+*/
+/*--------- Features---------------- */
 
 .features{
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-flow: row wrap;
+}
+
+.features h2{
+  margin-bottom: 60px;
+}
+
+.features article{
+  width: 60%; 
+  margin: 30px 0;
 }
 
 .features .features-items{
@@ -204,42 +222,34 @@ aside{
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  padding: 65px 0 80px 0;
-}
-
-.features h2{
-  padding-top: 45px;
-}
-
-.features article{
-  width: 60%; 
 }
 
 .features p{
   margin: 0;
 }
 
+/* ------------Reviews------------ */
+
 .reviews{
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: row wrap;
   background: green;
 }
 
 .reviews h2{
-  margin: 30px 0 0 0;
+  margin-bottom: 40px;
 }
 
 .reviews h3{
   width: 55%;
+  margin: 20px 0;
 }
 
-.reviews p{
-  margin-bottom: 40px;
-}
 
-/* -------<<Mobile>>---About page------------------*/
+/*=======================================================================================
+              <<Mobile>> About page
+=========================================================================================*/
 
 .mission {
   display: flex;
@@ -248,19 +258,6 @@ aside{
   flex-flow: row wrap;
   background: green;
 }
-
-.mission h2{
-  margin-top: 50px;
-}
-
-.mission-content {
-  margin-bottom: 50px;
-}
-
-.map{
-  height: 790px;
-}
-
 .contact-section{
   display: flex;
   justify-content: center;
@@ -269,11 +266,13 @@ aside{
   background: green;
 }
 
-.contact-section .content-wrapper{
-  margin: 30px 0;
+.contact-section p{
+  margin: 0;
 }
 
-/* -------<<Mobile>>---FAQ page------------------*/
+/*=======================================================================================
+              <<Mobile>> FAQ page
+=========================================================================================*/
 
 .faq{
   display: flex;
@@ -285,10 +284,18 @@ aside{
 
 .faq .content-wrapper{
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 40px;
+  margin: 50px 0 0 0;
+}
+
+.faq h2{
+  margin-bottom: 40px;
+}
+
+.faq-content{
+  margin-bottom: 50px;
 }
 
 /* ==========================================================================
