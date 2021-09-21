@@ -96,11 +96,12 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   text-align: left;
+  color: white;
 }
  
 ul, 
 ol {
-  list-style: none;
+  list-style-type: none;
 }
  
 a {
@@ -116,13 +117,14 @@ h2 {
 h3, 
 h4 {
   font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   font-size: 1.125em;
   margin: 20px 0;
 }
  
 p {
   font-size: 0.875em;
-  line-height: 24px;
+  line-height: 1.285;
 	
 }
  
@@ -143,31 +145,6 @@ address {
   margin: 50px 0;
 }
 
-aside .form {
-  margin-top: 30px;
-}
- 
-input[type=text] {
-  box-sizing: border-box;
-  width: 100%;
-  color: #2a423a;
-  font-style: italic;
-  padding: 1em;
-}
- 
-input[type=button] {
-  width: 100%;
-  padding: 20px 0;
-  margin-top: 20px;
-  background-color: #2a423a;
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 1.125em;
-  color: #e2e3ed;
-  border: none;
-  text-align: center;
-  text-transform: uppercase;
-}
 
  /*--------------------base header-----footer style---------------------------*/
 
@@ -177,6 +154,7 @@ footer{
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color:#202322;
 }
 
 header{
@@ -195,7 +173,7 @@ header .content-wrapper{
   margin: 10px 0 20px 0;
   height: 1px;
   width: 100%;
-  background: darkgrey;
+  background: #3a3a3a;
 }
 
 header nav{
@@ -204,6 +182,9 @@ header nav{
   align-items: center; 
   flex-flow: row wrap;
   width: 60%;
+  font-size: 1.125em; /*why same thing is mentioned in li?*/
+  font-weight: 700;/*<== why 700 instead of Bold? PSD file said bold*/
+  text-transform: uppercase;
 }
 
 header nav ul{
@@ -212,7 +193,12 @@ header nav ul{
   width: 100%;
 }
 
+header nav ul li{
+  font-size: 1.125em; /*do we need this even though same thing is mentioned in nav?*/
+}
+
 footer {
+  text-align: center;
   flex-direction: column;
 }
 
@@ -255,7 +241,14 @@ footer .copyright {
 .hero-area{
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-flow: row wrap; /*<=do we need this/*/
+}
+
+.hero-area h1 {
+  font-size: 2.25em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500; 
+  line-height: 1.2; 
 }
 
 /*------- Aside-Form-------------- */
@@ -264,18 +257,35 @@ aside{
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background: green;
+  background: #527158;
 }
 
-/*.form-description{
-  margin-top: 50px;
-  margin-bottom: 40px;
+aside .form {
+  margin-top: 30px;
+}
+ 
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.form{
-  margin-bottom: 50px;
-}
-*/
 /*--------- Features---------------- */
 
 .features{
@@ -301,6 +311,7 @@ aside{
 }
 
 .features p{
+  text-align: center;
   margin: 0;
 }
 
@@ -310,11 +321,12 @@ aside{
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  background: green;
+  background: #2a423a;
 }
 
 .reviews h2{
   margin-bottom: 40px;
+  line-height: 1;
 }
 
 .reviews h3{
@@ -327,19 +339,20 @@ aside{
               <<Mobile>> About page
 =========================================================================================*/
 
+
 .mission {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background: green;
+  background: #527158;
 }
 .contact-section{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background: green;
+  background: #2a423a;
 }
 
 .contact-section p{
@@ -355,7 +368,7 @@ aside{
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background: green;
+  background:#527158;
 }
 
 .faq .content-wrapper{
@@ -368,12 +381,17 @@ aside{
 
 .faq h2{
   margin-bottom: 40px;
+  line-height: 1;
 }
 
 .faq-content{
   margin-bottom: 50px;
+  
 }
 
+.faq-content h4{
+  line-height: 1.333;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -474,10 +492,20 @@ aside{
     margin: 100px 0;
   }
 
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+  }
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
   /*-----Header------*/
 
   header{
     justify-content: space-around; /*<--why do we need this?.there is content-wrapper under this*/
+    padding: 33px 0;
   }
 
   header .content-wrapper{
@@ -508,31 +536,48 @@ aside{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
 
   footer .contact{
     margin-bottom: 0;
   }
 
+  footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+  }
+
+  footer p {
+      line-height: 1.285;
+  }
+
   footer .copyright {
     width: 100%;
     text-align: center;
   }
-  /*----Aside -form-----*/
+
+   /* Aside */
+
   aside .content-wrapper {
-    margin: 50px 0; /*<--do we need this? it looks like 50px is already inherited from .content-wrapper*/
+    margin: 50px 0;
     display: flex;
     justify-content: space-between;
-    flex-flow: row wrap; /*<-----why do we need this-won't change anything*/
+    flex-flow: row wrap;
   }
+
   aside .content-wrapper .form-description,
   aside .content-wrapper .form {
-    width: 35%;
+    width: 40%;
     margin: 0;
   }
 
 
   /*-------Features-----------*/
+
+  .features h2 {
+    margin-bottom: 20px;
+  }
 
   .features article{
     display: flex;
@@ -543,7 +588,7 @@ aside{
   }
 
   .features .features-item-description{
-    width: 50%;
+    width: 62%;
   }
 
   /*--------Reviews -------------*/
@@ -553,10 +598,19 @@ aside{
     justify-content: space-between;
   }
 
+  .reviews h2 {
+    width: 85%;
+  }
+
+
   .reviews article div{
     width: 49%;
   }
 
+  .reviews h3 {
+    width: 75%;
+    margin: 0;
+  }
   /*======<<Tablet>> About page==============*/
 
   /*----Mission----*/
@@ -565,6 +619,7 @@ aside{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 20px;
   }
 
   .mission-content p{
@@ -583,6 +638,9 @@ aside{
     align-items: flex-start;
   }
 
+  .contact-content h4 {
+    font-size: 1.5em;
+  }
 
   /*===== <<Tablet>> FAQ page============*/
 
@@ -597,6 +655,12 @@ aside{
     width: 100%;
   }
 
+  .faq h4,
+  .faq p {
+      font-size: .875em;
+      line-height: 1.125;
+  }
+
 }
 
 /*=======================================================================================
@@ -604,14 +668,33 @@ aside{
 =========================================================================================*/
 
 @media only screen and (min-width: 1200px){
+
+  header {
+    padding: 15px 0;
+  }
   
   .content-wrapper {
     max-width: 960px; /*<--here why do we set max with instead of % width*/
   }
 
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+      font-size: 1.875em;
+  }
+
+  p {
+      font-size: 1.125em;
+      line-height: 1.333;
+  }
+
   /* Hero*/
 
   .hero-area h1 {
+    font-size: 3.75em;
     width: 60%;
   }
 
@@ -623,8 +706,13 @@ aside{
 
   aside .content-wrapper .form-description,
   aside .content-wrapper .form {
-      width:30%;
+    width: 30%;
   }
+
+  .form-description p {
+    font-size: 1.125em;
+  }
+
 
   /* Features */
 
@@ -637,8 +725,17 @@ aside{
   }
 
   /* Reviews */ 
+
+  .reviews h2 {
+    padding-bottom: 50px; 
+  }
+
   .reviews article div {
     width: 42%;
+  }
+
+  footer h4 {
+    font-size: 1.875em;
   }
 
   /*======<<Desktop>>==About page==============*/
@@ -646,12 +743,24 @@ aside{
   .mission h2,
   .contact-section .content-wrapper h2 {
     width:95%; 
+    font-size: 3em;
+  }
+
+  .contact-content h4 {
+    font-size: 1.875em;
   }
 
   /*======<<Desktop>>==FAQ page==============*/
 
-  .faq h2{
+  .faq h2 {
     width: 100%;
+    font-size: 3em;
+  }
+    
+  .faq h4,
+  .faq p {
+      font-size: 1.125em;
+      line-height: 1;
   }
 
 }
