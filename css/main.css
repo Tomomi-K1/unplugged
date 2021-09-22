@@ -129,11 +129,11 @@ p {
 }
  
 img {
- 
+ width: 100%;
 }
  
 figure {
- 
+ margin: 0;
 }
  
 address {
@@ -176,6 +176,14 @@ header .content-wrapper{
   background: #3a3a3a;
 }
 
+header figure {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
 header nav{
   display: flex;
   justify-content: space-around;
@@ -190,6 +198,7 @@ header nav{
 header nav ul{
   display: flex;
   justify-content: space-around;
+  padding: 0;
   width: 100%;
 }
 
@@ -242,6 +251,9 @@ footer .copyright {
   display: flex;
   justify-content: center;
   flex-flow: row wrap; /*<=do we need this/*/
+  background: url('../img/hero-image.jpg') center no-repeat;
+  background-size: cover;
+  
 }
 
 .hero-area h1 {
@@ -292,6 +304,8 @@ input[type=button] {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background: url('../img/features-background.jpg') center no-repeat;
+  background-size: cover;
 }
 
 .features h2{
@@ -347,6 +361,21 @@ input[type=button] {
   flex-flow: row wrap;
   background: #527158;
 }
+
+.map figure{
+  background: url('../img/map-desktop.jpg') center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+
+.map img{
+  width: 100%;
+}
+
+
 .contact-section{
   display: flex;
   justify-content: center;
@@ -513,12 +542,20 @@ h3 {
     justify-content:space-between;
   }
 
+  header figure {
+    width: 35%;
+  }
+
   header nav{
     width: 20%;
   }
 
   header nav ul{
     justify-content: space-between;
+  }
+
+  header nav ul li{
+    font-size: 1em;
   }
 
   .header-divider {
