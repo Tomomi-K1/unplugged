@@ -111,6 +111,7 @@ a {
  
 h2 {
   font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   font-size: 1.875em;
 }
  
@@ -208,7 +209,7 @@ header nav ul li{
 
 footer {
   text-align: center;
-  flex-direction: column;
+  flex-direction: column; /*<---why this doesn't affect desktop ?*/
 }
 
 footer p{
@@ -253,6 +254,7 @@ footer .copyright {
   flex-flow: row wrap; /*<=do we need this/*/
   background: url('../img/hero-image.jpg') center no-repeat;
   background-size: cover;
+  min-height: 500px; /*<--why minimum height? instead of just height?*/
   
 }
 
@@ -639,7 +641,7 @@ h3 {
     width: 85%;
   }
 
-
+  .reviews article figure,
   .reviews article div{
     width: 49%;
   }
@@ -669,7 +671,7 @@ h3 {
     width: 80%;
   }
 
-  address.contact-content {
+  .contact-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
