@@ -365,18 +365,20 @@ input[type=button] {
 }
 
 .map figure{
-  background: url('../img/map-desktop.jpg') center no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 450px;
+ width: 100%;
+ height: 0%;
+ padding-bottom: 125%;/*<--this give the height to container<figure>*/
+ overflow: hidden;
+ position: relative;
 }
 
-.map img{
-  width: 100%;
+.map iframe{
+  width: 100%;/*<--height& width needs to be set 100% to fill the entier container*/
+  height: 100%;
+  position: absolute;
+  top: 0; /*< -- by setting top & left 0, map will be placed the left top corner*/
+  left: 0;  
 }
-
 
 .contact-section{
   display: flex;
