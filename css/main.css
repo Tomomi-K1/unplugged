@@ -96,12 +96,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   text-align: left;
-  color: white;
+  color: #e2e3ed;
 }
  
 ul, 
 ol {
   list-style-type: none;
+  margin: 0;
 }
  
 a {
@@ -113,6 +114,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 1.875em;
+  margin: 0;
 }
  
 h3, 
@@ -120,7 +122,7 @@ h4 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 1.125em;
-  margin: 20px 0;
+  margin: 20px 0; /* <-how do you decide the margin for general setting*/
 }
  
 p {
@@ -170,13 +172,6 @@ header .content-wrapper{
   margin:0;
 }
 
-.header-divider{
-  margin: 10px 0 20px 0;
-  height: 1px;
-  width: 100%;
-  background: #3a3a3a;
-}
-
 header figure {
     width: 60%;
     display: flex;
@@ -185,22 +180,28 @@ header figure {
     flex-flow: row wrap;
 }
 
+.header-divider{
+  margin: 10px 0 20px 0;
+  height: 1px;
+  width: 100%;
+  background: #3a3a3a;
+}
+
 header nav{
-  display: flex;
-  justify-content: space-around;
-  align-items: center; 
-  flex-flow: row wrap;
   width: 60%;
   font-size: 1.125em; /*why same thing is mentioned in li?*/
   font-weight: 700;/*<== why 700 instead of Bold? PSD file said bold*/
   text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+  flex-flow: row wrap;
 }
 
 header nav ul{
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 0;
-  width: 100%;
 }
 
 header nav ul li{
@@ -219,7 +220,6 @@ footer p{
 footer .content-wrapper{
   width: 55%;
   margin: 55px 0;
-  text-align: center;
 }
 
 footer .contact{
@@ -233,9 +233,17 @@ footer .social-icons{
 }
 
 footer .social-icons p{
+  background-color: #527158;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer .social-icons p i{
+  font-size: 1.3125em;
 }
 
 footer .copyright {
@@ -561,6 +569,7 @@ h3 {
 
   header nav ul{
     justify-content: space-between;
+    padding: 0;
   }
 
   header nav ul li{
@@ -578,7 +587,7 @@ h3 {
     margin: 100px 0;
   }
 
-  .footer-content{
+  footer .footer-content{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -596,6 +605,11 @@ h3 {
 
   footer p {
       line-height: 1.285;
+  }
+
+  footer .social-icons{
+    width: 12.5em;
+    justify-content: space-between;
   }
 
   footer .copyright {
@@ -674,6 +688,12 @@ h3 {
 
   /*----Contact Section----*/
 
+  .map figure{
+    padding-bottom: 45%;
+  }
+
+  /*----Contact Section----*/
+
   .contact-section .content-wrapper h2{
     width: 80%;
   }
@@ -741,7 +761,7 @@ h3 {
 
   .hero-area h1 {
     font-size: 3.75em;
-    width: 60%;
+    width: 80%;
   }
 
   /* Aside */
@@ -790,6 +810,10 @@ h3 {
   .contact-section .content-wrapper h2 {
     width:95%; 
     font-size: 3em;
+  }
+
+  .map figure{
+    padding-bottom: 37.5%;
   }
 
   .contact-content h4 {
