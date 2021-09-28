@@ -103,6 +103,7 @@ ul,
 ol {
   list-style-type: none;
   margin: 0;
+  padding: 0;
 }
  
 a {
@@ -282,6 +283,10 @@ aside{
   background: #527158;
 }
 
+.form-description h3{
+  margin-top: 0px;
+}
+
 aside .form {
   margin-top: 30px;
 }
@@ -318,12 +323,16 @@ input[type=button] {
   background-size: cover;
 }
 
+.features .content-wrapper{
+  width: 88%;
+}
+
 .features h2{
   margin-bottom: 60px;
 }
 
 .features article{
-  width: 60%; 
+  width: 63%; 
   margin: 30px 0;
 }
 
@@ -346,6 +355,10 @@ input[type=button] {
 
 /* ------------Reviews------------ */
 
+
+.reviews .content-wrapper{
+  width: 88%;
+}
 .reviews{
   display: flex;
   justify-content: center;
@@ -436,7 +449,12 @@ input[type=button] {
 }
 
 .faq-content h4{
+  margin-top: 0;
   line-height: 1.333;
+}
+
+.faq-content p {
+  margin: 0;
 }
 /* ==========================================================================
    Helper classes
@@ -569,11 +587,6 @@ h3 {
 
   header nav ul{
     justify-content: space-between;
-    padding: 0;
-  }
-
-  header nav ul li{
-    font-size: 1em;
   }
 
   .header-divider {
@@ -617,6 +630,17 @@ h3 {
     text-align: center;
   }
 
+  /*Hero Area*/
+
+  .hero-area {
+    min-height: 600px;
+  }
+  .hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin-top: 0;
+  }
+
    /* Aside */
 
   aside .content-wrapper {
@@ -624,6 +648,10 @@ h3 {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
+  }
+
+  aside .form h3{
+    margin-top: 0px;
   }
 
   aside .content-wrapper .form-description,
@@ -645,6 +673,10 @@ h3 {
     align-items: center;
     flex-flow: column wrap;
     flex-basis: 50%;/*<---why do we do flex basis instead of width*/
+  }
+
+  .features i{
+    font-size: 5.14em;
   }
 
   .features .features-item-description{
@@ -683,13 +715,13 @@ h3 {
   }
 
   .mission-content p{
-    width: 45%; /*how to decide when to use flex-basis vs width %*/
+    width: 46%; /*how to decide when to use flex-basis vs width %*/
   }
 
   /*----Contact Section----*/
 
   .map figure{
-    padding-bottom: 45%;
+    padding-bottom: 45.5%;
   }
 
   /*----Contact Section----*/
@@ -757,7 +789,15 @@ h3 {
       line-height: 1.333;
   }
 
+  /*header nav*/
+  header nav ul{
+    justify-content: space-around
+  };
+
   /* Hero*/
+  .hero-area .content-wrapper {
+    margin-top: 60px;
+  }
 
   .hero-area h1 {
     font-size: 3.75em;
@@ -772,11 +812,16 @@ h3 {
 
   aside .content-wrapper .form-description,
   aside .content-wrapper .form {
-    width: 30%;
+    width: 35%;
   }
 
   .form-description p {
     font-size: 1.125em;
+    padding-right: 85px;
+  }
+
+  input[type=button] {
+    font-size: 1.5em;
   }
 
 
@@ -797,7 +842,7 @@ h3 {
   }
 
   .reviews article div {
-    width: 42%;
+    width: 45%;
   }
 
   footer h4 {
@@ -808,7 +853,7 @@ h3 {
 
   .mission h2,
   .contact-section .content-wrapper h2 {
-    width:95%; 
+    width:96%; 
     font-size: 3em;
   }
 
@@ -816,9 +861,14 @@ h3 {
     padding-bottom: 37.5%;
   }
 
+  .contact-content div {
+    padding-right: 120px;
+  }
+
   .contact-content h4 {
     font-size: 1.875em;
   }
+
 
   /*======<<Desktop>>==FAQ page==============*/
 
