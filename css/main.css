@@ -543,6 +543,33 @@ input[type=button] {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (max-width:300px) {
+  .hero-area h1 {
+    font-size: 2em;
+  }
+
+  aside h2{
+    font-size: 1.6em;
+  }
+
+  .reviews h2 {
+    font-size: 1.6em;
+  }
+
+  .reviews h3{
+    width: 80%;
+  }
+
+  .mission h2, .contact-section h2 {
+    font-size: 1.6em;
+  }
+
+}
+
+
+
+
+
 
 /*=======================================================================================
        Tablet Style
